@@ -1,10 +1,10 @@
 /******/ (function() { // webpackBootstrap
 /******/ 	var __webpack_modules__ = ({
 
-/***/ "./demo/node.tsx":
-/*!***********************!*\
-  !*** ./demo/node.tsx ***!
-  \***********************/
+/***/ "./demo/standalone.ts":
+/*!****************************!*\
+  !*** ./demo/standalone.ts ***!
+  \****************************/
 /*! namespace exports */
 /*! exports [not provided] [no usage info] */
 /*! runtime requirements: __webpack_require__, __webpack_require__.n, __webpack_require__.r, __webpack_exports__, __webpack_require__.* */
@@ -12,16 +12,12 @@
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
-/* harmony import */ var _lib__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../lib */ "./lib/index.js");
-/* harmony import */ var _lib_tygr_logo_min_css__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../lib/tygr-logo.min.css */ "./lib/tygr-logo.min.css");
-/* harmony import */ var _lib_tygr_logo_min_css__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(_lib_tygr_logo_min_css__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var _lib_standalone__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../lib/standalone */ "./lib/standalone.js");
+/* harmony import */ var _lib_tygr_logo_min_css__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../lib/tygr-logo.min.css */ "./lib/tygr-logo.min.css");
+/* harmony import */ var _lib_tygr_logo_min_css__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_lib_tygr_logo_min_css__WEBPACK_IMPORTED_MODULE_1__);
 ;
 
-
-
-react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_lib__WEBPACK_IMPORTED_MODULE_2__.default, null), document.getElementById('app'));
+_lib_standalone__WEBPACK_IMPORTED_MODULE_0__.default.mount(document.getElementById('app'));
 
 /***/ }),
 
@@ -38,11 +34,11 @@ react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/react__WEBPACK_IMPOR
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": function() { return /* binding */ TG; }
+/* harmony export */   "default": function() { return /* binding */ Logo; }
 /* harmony export */ });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 ;
-function TG() {
+function Logo() {
   return /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("div", {
     className: "tygr-logo"
   }, /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement("svg", {
@@ -61,10 +57,10 @@ function TG() {
 
 /***/ }),
 
-/***/ "./lib/index.js":
-/*!**********************!*\
-  !*** ./lib/index.js ***!
-  \**********************/
+/***/ "./lib/standalone.js":
+/*!***************************!*\
+  !*** ./lib/standalone.js ***!
+  \***************************/
 /*! namespace exports */
 /*! export default [provided] [no usage info] [missing usage info prevents renaming] */
 /*! other exports [not provided] [no usage info] */
@@ -73,9 +69,17 @@ function TG() {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _Logo__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./Logo */ "./lib/Logo.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
+/* harmony import */ var _Logo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Logo */ "./lib/Logo.js");
 ;
-/* harmony default export */ __webpack_exports__["default"] = (_Logo__WEBPACK_IMPORTED_MODULE_0__.default);
+
+
+/* harmony default export */ __webpack_exports__["default"] = ({
+  mount: function mount(el) {
+    react_dom__WEBPACK_IMPORTED_MODULE_1__.render( /*#__PURE__*/react__WEBPACK_IMPORTED_MODULE_0__.createElement(_Logo__WEBPACK_IMPORTED_MODULE_2__.default), el);
+  }
+});
 
 /***/ }),
 
@@ -30072,8 +30076,8 @@ if (false) {} else {
 /************************************************************************/
 /******/ 	// startup
 /******/ 	// Load entry module
-/******/ 	__webpack_require__("./demo/node.tsx");
+/******/ 	__webpack_require__("./demo/standalone.ts");
 /******/ 	// This entry module used 'exports' so it can't be inlined
 /******/ })()
 ;
-//# sourceMappingURL=node.5031bdf1dcfeca092701.js.map
+//# sourceMappingURL=standalone.adc7f20d354767703662.js.map
